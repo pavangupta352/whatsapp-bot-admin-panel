@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WhatsApp Bot Admin Panel</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>WhatsApp Bot Admin Panel</h1>
+
+	<!-- Add new question form -->
+	<h2>Add New Question</h2>
+	<form id="add-question-form">
+		<label for="question">Question:</label>
+		<input type="text" id="question" name="question" required>
+
+		<label for="answer">Answer:</label>
+		<textarea id="answer" name="answer" required></textarea>
+
+		<button type="submit">Add Question</button>
+	</form>
+
+	<!-- List of existing questions -->
+	<h2>Existing Questions</h2>
+	<ul id="question-list"></ul>
+
+	<!-- Update question form (hidden by default) -->
+	<h2>Select Course then year and then a specific section to Send message to the selected section whatsapp group</h2>
+	<form id="update-question-form" style="display: none;">
+		<label for="update-question">Question:</label>
+		<input type="text" id="update-question" name="update-question" required>
+
+		<label for="update-answer">Answer:</label>
+		<textarea id="update-answer" name="update-answer" required></textarea>
+
+		<input type="hidden" id="update-id" name="update-id">
+
+		<button type="submit">Update Question</button>
+		<button type="button" id="cancel-update">Cancel</button>
+	</form>
+	<!-- Course selection form -->
+<form id="course-form">
+	<label for="course">Select course:</label>
+	<select id="course">
+		<option value="">-- Select course --</option>
+		<option value="btech">B.Tech</option>
+		<option value="bba">BBA</option>
+		<option value="bsc">B.Sc</option>
+	</select>
+</form>
+
+<!-- Year selection form -->
+<form id="year-form" style="display: none;">
+	<label for="year">Select year:</label>
+	<select id="year">
+		<option value="">-- Select year --</option>
+		<option value="1">1st year</option>
+		<option value="2">2nd year</option>
+		<option value="3">3rd year</option>
+		<option value="4">4th year</option>
+	</select>
+</form>
+
+<!-- Section selection form -->
+<form id="section-form" style="display: none;">
+	<label for="section">Select section:</label>
+	<select id="section">
+		<option value="">-- Select section --</option>
+		<option value="A">Section A</option>
+		<option value="B">Section B</option>
+		<option value="C">Section C</option>
+		<option value="D">Section D</option>
+		<option value="E">Section E</option>
+		<option value="F">Section F</option>
+		<option value="G">Section G</option>
+		<option value="H">Section H</option>
+		<option value="I">Section I</option>
+		<option value="J">Section J</option>
+		<option value="K">Section K</option>
+		<option value="L">Section L</option>
+		<option value="M">Section M</option>
+		<option value="N">Section N</option>
+		<option value="O">Section O</option>
+		<option value="P">Section P</option>
+		<option value="Q">Section Q</option>
+		<option value="R">Section R</option>
+		<option value="S">Section S</option>
+		<option value="T">Section T</option>
+		<option value="U">Section U</option>
+		<option value="V">Section V</option>
+		<option value="W">Section W</option>
+		<option value="X">Section X</option>
+		<option value="Y">Section Y</option>
+		<option value="Z">Section Z</option>
+	</select>
+</form>
+
+<!-- Message form -->
+<form id="message-form" style="display: none;">
+	<label for="message">Type message:</label>
+	<textarea id="message"></textarea>
+	<button type="submit">Send</button>
+	<button type="button" id="cancel-message">Cancel</button>
+</form>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
